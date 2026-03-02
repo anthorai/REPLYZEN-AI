@@ -1,0 +1,29 @@
+[functions.cron-worker]
+verify_jwt = false
+
+[functions.daily-digest]
+verify_jwt = false
+
+[functions.grace-period-check]
+verify_jwt = false
+
+[functions.fetch-emails]
+verify_jwt = false
+
+[functions.generate-followups]
+verify_jwt = true
+
+[functions.send-followup]
+verify_jwt = true
+
+[functions.gmail-connect]
+verify_jwt = false
+
+[functions.gmail-callback]
+verify_jwt = false
+
+[functions.disconnect-account]
+verify_jwt = true
+
+[functions.switch-account]
+verify_jwt = true
