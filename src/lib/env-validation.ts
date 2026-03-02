@@ -9,13 +9,21 @@ interface EnvConfig {
   SUPABASE_ANON_KEY: string;
   FRONTEND_URL: string;
   OPENAI_API_KEY?: string;
+  BREVO_API_KEY?: string;
   RAZORPAY_KEY_ID?: string;
+  RAZORPAY_KEY_SECRET?: string;
+  RAZORPAY_WEBHOOK_SECRET?: string;
+  PADDLE_API_KEY?: string;
+  PADDLE_WEBHOOK_SECRET?: string;
   PADDLE_VENDOR_ID?: string;
   PADDLE_PUBLIC_KEY?: string;
+  GMAIL_CLIENT_ID?: string;
+  GMAIL_CLIENT_SECRET?: string;
+  GMAIL_REDIRECT_URI?: string;
 }
 
 const requiredVars = ['VITE_SUPABASE_URL', 'VITE_SUPABASE_ANON_KEY'] as const;
-const optionalVars = ['VITE_RAZORPAY_KEY_ID', 'VITE_PADDLE_VENDOR_ID', 'VITE_PADDLE_PUBLIC_KEY'] as const;
+const optionalVars = ['VITE_RAZORPAY_KEY_ID', 'VITE_PADDLE_VENDOR_ID', 'VITE_PADDLE_PUBLIC_KEY', 'VITE_OPENAI_API_KEY', 'VITE_BREVO_API_KEY'] as const;
 
 let cachedConfig: EnvConfig | null = null;
 let validationError: Error | null = null;
